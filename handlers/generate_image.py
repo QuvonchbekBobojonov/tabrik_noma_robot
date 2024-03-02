@@ -29,6 +29,7 @@ async def design_handler(query: types.CallbackQuery, state: FSMContext) -> None:
     if query.data == "design_back":
         await query.message.answer("🏘 Asosiy menyuga qaytib keldik.", reply_markup=keyboards.menuBtns)
         await state.clear()
+        await query.message.delete()
         return
     await state.update_data(one=query.data)
     await query.message.answer("📝 Tabrik noma uchun ismingizni kiriting:")
