@@ -15,7 +15,7 @@ def create_image(name, design):
 
     if design == "design_1":
         image = Image.open("images/1.jpg")
-        color = "#7fe0f2"
+        color = "#64b1c5"
         x = (image.width - textsize(name, font_type)[0]) / 2.1
         xy = (x, 2900.28)
 
